@@ -34,6 +34,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     padding-top:15px;
 }    
 
+#map-container svg{
+    float:right;
+}   
+
 #map-container-top-right{
      position: relative; 
 }
@@ -45,21 +49,39 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .map-legend-right{
     float:right;
 }
-    dl
-     {
-         width: 300px;
-         background: #fff;
-         padding: 5px 15px;
-         margin-bottom:25px;
-         
-      }
 
-      dt{
-         width:10px; 
-         height:10px;
+dl{
+    width: 300px;
+    background: #fff;
+    padding: 5px 15px;
+    margin-bottom:25px;
+ }
+
+dt{
+    display:inline;
+    border: 1px solid #000;
+     
+ }
+    
+dt#legend-low{
+      background:green; 
+      padding:5px 15px;
+ }
+      
+dt#legend-elevated{
+      background:yellow; 
+      padding:5px 15px;
+  
+      
       }
       
-      dd
+dt#legend-high{
+      background:red; 
+      padding:5px 15px;
+      
+    
+      }
+dd
       {
          display: inline;
       }   
