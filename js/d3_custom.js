@@ -59,5 +59,5 @@
             },
             
             });
-          map.labels();
-          window.addEventListener('resize', function() { map.resize(); }); 
+          map2.labels();
+          window.addEventListener('resize2', function() { map2.resize2(); }); 
