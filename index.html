@@ -24,35 +24,20 @@
              <div class="main-inner-wrapper">  
                 <h1>Risk Management Maps</h1>
                  <div class="grey-clear-bar"></div>  
-                 <!--First Left Map-->
+                 <!--First Map-->
                     <div id="map-container">
                        <dl class="map-legend-left">
                             <h5 style="padding-bottom:15px";>Risk Category</h5>
-                            <dt style="background:green; padding:5px 15px;height:5px;  display: inline;"></dt>
+                            <dt id="legend-low"></dt>
                             <dd> - Low </dd>
 
-                            <dt style="background:yellow; padding:5px 15px;height:5px;   display: inline;"></dt>
+                            <dt id="legend-elevated"></dt>
                             <dd> - Elevated </dd>
 
-                            <dt style="background:red; padding:5px 15px;height:5px;  display: inline;"> </dt>
+                            <dt id="legend-high"> </dt>
                             <dd> - Significant </dd>
                         </dl>
                     </div>
-                 <!--Second Map  
-                      <div id="map-container-2">
-                           <dl class="map-legend-right">
-                              <h5 style="padding-bottom:15px";>#of CFDA</h5>
-                              <dt style="background:green; padding:5px 15px;height:5px; border:1px solid #000;  display: inline;"></dt>
-                            <dd>- Low </dd>
-
-                            <dt style="background:#C1E398; padding:5px 15px;height:5px; border:1px solid #000;  display: inline;"></dt>
-                            <dd> - Elevated </dd>
-
-                            <dt style="background:orange; padding:5px 15px;height:5px; border:1px solid #000;  display: inline;"> </dt>
-                            <dd> - Significant </dd>
-                        </dl>
-                          
-                      </div>-->
                        
                 <!--Third Map
                        <div id="map-container-2"></div>
@@ -78,7 +63,23 @@
                             <dt>[red]</dt>
                             <dd> - LabelC </dd>
                         </dl>-->
-                 <div class="grey-clear-bar"></div> 
+             <div class="grey-clear-bar"></div> 
+                    <!--Second Map-->
+                      <div id="map-container-2">
+                           <dl class="map-legend-right">
+                              <h5 style="padding-bottom:15px";>#of CFDA</h5>
+                                <dt id="legend-low"></dt>
+                                <dd> - Tier 1 </dd>
+
+                                <dt id="legend-elevated"></dt>
+                                <dd> - Tier 2 </dd>
+
+                                <dt id="legend-high"> </dt>
+                                <dd> - Tier 3 </dd>
+                         </dl>
+             </div>
+            <div class="grey-clear-bar"></div>     
+                 
              </div>    
         <section>
                 
