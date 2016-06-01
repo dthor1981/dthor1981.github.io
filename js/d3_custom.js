@@ -5,39 +5,28 @@
               responsive: true,
               scope: "usa",
               fills:{
-                         //DEFAULT MAP COLOR   
-                        // defaultFill: 'rgba(241, 241, 241, 1)' // Any hex, color name or rgb/rgba value
-                            highRiskColor: '#02bfe7',
-                            mediumRiskColor: '#046b99',
-                            lowRiskColor: '#9bdaf1',
-                            UNKNOWN: 'rgb(0,0,0)',
-                            defaultFill: 'rgba(241, 241, 241, 1)'
+          
+                    low: 'green',
+                    elevated: 'yellow',
+                    significant:'red'
                },
-              
-              data:{ 
-                 MI: {
-                     fillKey:"highRiskColor",
-                     avgTtlRisk:"32.4"
-                },
-                 FL: {
-                     fillKey:"mediumRiskColor",
-                     avgTtlRisk:"36.6"
-                    
-                },
-                 CA: {
-                     fillKey:"lowRiskColor"},
-                     avgTtlRisk:"27.1"
-               },
+              height:500,
+              width:700,
+                
+            dataUrl: '../data/state_risk_data.csv',
+            dataType: 'csv',
+            data: {},
                 
             geographyConfig: {
                     highlightBorderColor: '#bada55',
-                popupTemplate: function(geography, data) {
-                    return '<div class="hoverinfo">' + geography.properties.name +'<br>'+ 'Average Total Risk for State:' +  data.avgTtlRisk + ' '
+                    popupTemplate: function(geography, data) {
+                    return '<div class="hoverinfo">' + geography.properties.name +'<br>'+ 'Total Risk: ' +  data.totalRisk + ' '
                     },
             highlightBorderWidth: 3
             },
             
-            }
-          );
-
+            });
+          map.labels();
           window.addEventListener('resize', function() { map.resize(); });
+          
+  
