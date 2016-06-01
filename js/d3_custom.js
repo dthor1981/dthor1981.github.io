@@ -13,7 +13,7 @@
               height:500,
               width:700,
                 
-            dataUrl: '../data/state_risk_data.csv',
+            dataUrl: '../data/map1.csv',
             dataType: 'csv',
             data: {},
                 
@@ -27,6 +27,6 @@
             
             });
           map.labels();
-          window.addEventListener('resize', function() { map.resize(); });
+          window.addEventListener('resize', function() { map.resize(); }); 
           
   
