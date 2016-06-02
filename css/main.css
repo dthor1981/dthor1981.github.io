@@ -78,6 +78,17 @@ dt#legend-elevated{
 dt#legend-high{
       background:red; 
       padding:5px 15px;
+      }
+      
+      dt#legend-high{
+      background:orange; 
+      padding:5px 15px;
+      }
+      
+      
+dt#legend-high{
+      background:brown; 
+      padding:5px 15px;
       
     
       }
