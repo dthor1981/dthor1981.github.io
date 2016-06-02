@@ -63,30 +63,30 @@ dt{
      
  }
     
-dt#legend-low{
+dt.legend-low{
       background:green; 
       padding:5px 15px;
  }
       
-dt#legend-elevated{
+dt.legend-elevated{
       background:yellow; 
       padding:5px 15px;
   
       
       }
       
-dt#legend-high{
+dt.legend-high{
       background:red; 
       padding:5px 15px;
       }
       
-      dt#legend-high{
+dt.legend-tier-four{
       background:orange; 
       padding:5px 15px;
       }
       
       
-dt#legend-high{
+dt.legend-tier-five{
       background:brown; 
       padding:5px 15px;
       
