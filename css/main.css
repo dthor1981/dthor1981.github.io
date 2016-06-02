@@ -88,12 +88,11 @@ dt.legend-tier-four{
       
 dt.legend-tier-five{
       background:brown; 
-      padding:15px 15px;
+      padding:5px 15px;
       
     
       }
 dd
       {
          display: inline;
-         margin:15px 5px;
       }   
