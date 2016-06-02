@@ -82,17 +82,18 @@ dt.legend-high{
       
 dt.legend-tier-four{
       background:orange; 
-      padding:15px 15px;
+      padding:5px 15px;
       }
       
       
 dt.legend-tier-five{
       background:brown; 
-      padding:15px 15px;
+      padding:5px 15px;
       
     
       }
 dd
       {
          display: inline;
+         padding:5px 5px;
       }   
