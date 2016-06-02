@@ -29,6 +29,19 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     margin: 25 0 25 0;
     clear:both;
 }
+
+
+.text-box-content{
+    float:left;  
+    /*border: 1px solid #000;*/
+    height:300px; 
+    width:300px; 
+    clear:both;
+    padding: 10px 10px 10px 10px;
+}
+
+
+
 /*Data Maps Override*/
 #map-container{
     position: relative; 
@@ -39,15 +52,19 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
    padding-bottom:15px;
 }   
 
+#map-container svg{
+    float:right;
+}   
+
 #map-container-two{
     position: relative; 
     padding-top:15px;
 }    
 
 
-#map-container svg{
-    float:right;
-}   
+#map-container-two svg{
+    float:left;
+}  
 
 #map-container-top-right{
      position: relative; 
@@ -73,7 +90,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 }
 
 dl{
-    width: 320px;
+    width: 340px;
     background: #fff;
     padding: 5px 15px;
     margin-bottom:25px;
@@ -83,6 +100,11 @@ dt{
     display:inline;
     border: 1px solid #000;
      
+ }
+    
+dt.leg-horiz{
+    display:inline;
+    border: 1px solid #000;
  }
     
 dt.legend-green{
@@ -102,42 +124,93 @@ dt.legend-red{
       padding:5px 15px;
       }
       
-dt.legend-orange{
-      background:orange; 
-      padding:5px 15px;
-      }
-      
-      
-dt.legend-brown{
-      background:brown; 
-      padding:5px 15px;
-      }
-      
-dt.legend-indigo{
-      background:indigo; 
-      padding:5px 15px;
-      }
-      
-dt.legend-violet{
-      background:violet; 
-      padding:5px 15px;
-      }
-      
- dt.legend-blue{
-      background:blue; 
-      padding:5px 15px;
-      }     
+/******************/
 
-dt.legend-gray{
-      background:gray; 
+dt.legend-mp2-first{
+      background:#38B3BC; 
+      padding:5px 15px;
+ }
+      
+dt.legend-mp2-second{
+      background:#2D9097; 
+      padding:5px 15px;
+  
+      
+      }
+      
+dt.legend-mp2-third{
+      background:#226E73; 
       padding:5px 15px;
       }
-dt.legend-pink{
-      background:pink; 
+      
+dt.legend-mp2-fourth{
+      background:#174B4F; 
       padding:5px 15px;
-      }       
-                  
+      }
+      
+dt.legend-mp2-fifth{
+      background:#0D292B; 
+      padding:5px 15px;
+      }      
+/******************/
+    
+      
+dt.legend-mp3-first{
+      background:#e3f6f8 ; 
+      padding:5px 15px;
+ }
+      
+dt.legend-mp3-second{
+      background:#cbe0e2; 
+      padding:5px 15px;  
+      }
+      
+dt.legend-mp3-third{
+      background:#b3cacc; 
+      padding:5px 15px;
+      }
+      
+dt.legend-mp3-fourth{
+      background:#9bb4b7; 
+      padding:5px 15px;
+      }
+      
+dt.legend-mp3-fifth{
+      background:#839ea1; 
+      padding:5px 15px;
+      }            
+             
+dt.legend-mp3-sixth{
+      background: #6c898b ; 
+      padding:5px 15px;
+ }
+      
+dt.legend-mp3-seventh{
+      background:#3c5d60; 
+      padding:5px 15px;  
+      }
+      
+dt.legend-mp3-eigth{
+      background:#b3cacc; 
+      padding:5px 15px;
+      }
+      
+dt.legend-mp3-ninth{
+      background: #24474A; 
+      padding:5px 15px;
+      }
+      
+dt.legend-mp3-tenth{
+      background:#0d3235  ; 
+      padding:5px 15px;
+      }                     
 dd
       {
          display: inline;
+         padding: 0px 0px 0px 3px;
       }   
+      
+#text-box-content_one dd{
+    padding:5px 0px 0px 0px;
+    display:inline;
+}
