@@ -18,7 +18,10 @@ font-weight: bold;
 }
 
 .custom-jumbotron{
-    background-color: #22AB50 !important; 
+    /*background-color: #22AB50 !important;*/
+   background-image: url(../img/mush-bkg.png) !important;
+   background-repeat: no-repeat;
+   background-position: center;
 }
 
 .quotes{
