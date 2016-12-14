@@ -1,11 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Quicksand');
 
 /* ==========================================================================
    Custom styles
    ========================================================================== */
 
 /*General styles*/
+
+p{font-family: 'Quicksand', sans-serif;
+font-size: 14pt;
+}
+
+h2{font-family: 'Quicksand', sans-serif;
+font-weight: bold;
+}
 
 .custom-jumbotron{
     background-color: #22AB50 !important; 
@@ -23,6 +33,7 @@
 #top-section h1 {
     text-align:center;
      border-bottom: 1px solid #333;
+     font-family: 'Gloria Hallelujah', cursive;
 }
 
 #top-section p{
@@ -32,7 +43,8 @@ font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", s
 }
 
 .text-emphasis{
-    font-style: italic;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1rem;
 }
 
 hr{
