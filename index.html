@@ -38,6 +38,7 @@
         <script src="app/controllers/wordScrollController.js"></script>
         <script src="app/controllers/apiRefController.js"></script>
         <script src="app/directives/apiRefDirectives.js"></script>
+        <script src="app/directives/audioDirectives.js"></script>
 
        <!-- <script src="views/api_view_controller.js"></script> -->
     </head>
@@ -77,8 +78,8 @@
             class="txt-rotate"
             data-period="5000"
             data-rotate='[ "TO INFINITY AND BEYOND!...Buzz Lightyear", "If you weren&#x27;t you, then we&#x27;d all be a little less we...Piglet", "Giving up is for rookies...Phil(Hercules)", "Do or Do Not! There is no try...Jedi Master Yoda"]'></span>
-        </h3>    
-        
+        </h3>
+
        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
       </div>
     </div>
@@ -107,17 +108,23 @@
           <h2>About Me</h2>
           <p>A Michigander at heart. Born in Detroit and raised in the Metropolitan Area. I graduated from Michigan State University(<span class="text-emphasis">GO GREEN!</span>) with a degree in Advertising. Shortly after graduation, I moved to Washington D.C to pursue a career in creative advertising. However, life seldom goes the way you plan. I actually found myself drawn towards programming and more specifically web development. I then decided to pursue my Masters degree in Computer Science and graduated from the University of DC. More importantly, my wife said "yes" and I was blessed with all my amazing children.</p>
         </section>
-        
+
         <section id="proj-menu">
           <h2 id="proj-menu">Projects</h2>
-          <p>Front-End development is my passion and my primary focus.  Most of my projects involve html, css and Javascript. This includes leveraging libraries such as jQuery, Datatables, D3, and Highcharts. On top of that, I also use frameworks such as Bootstrap, Skeleton and Angular 1.x. Although I do have experience with backend technologies such as the .Net Framework, C# and PHP.</p>  
+          <p>Front-End development is my passion and my primary focus.  Most of my projects involve html, css and Javascript. This includes leveraging libraries such as jQuery, Datatables, D3, and Highcharts. On top of that, I also use frameworks such as Bootstrap, Skeleton and Angular 1.x. Although I do have experience with backend technologies such as the .Net Framework, C# and PHP.</p>
           <p>Please feel free to delve into my projects.</p>
 
         <div class="col-md-4 text-center oneup-fa-style" style="background-color: bisque;">
           <h3>Web Projects</h3>
             <span class="fa-stack fa-4x">
-               <!-- <i class="fa fa-circle-o fa-stack-2x big-icon fa-override" style="color:#ffff66" aria-hidden="true"></i>-->
-               <a href="projects.html"> <i class="fa fa-star fa-stack-3x big-icon fa-override" id="star" style="color:#ffff66"></i></a>
+              <my-audio>
+                  <audio class="player">
+                      <source src="audio/coin.mp3"/>
+                      <source src="audio/coin.ogg"/>
+                      <source src="audio/coin.wav"/>
+                  </audio>
+               <a href="projects.html" class="play"> <i class="fa fa-star fa-stack-3x big-icon fa-override" id="star" style="color:#ffff66"></i></a>
+              </my-audio>
             </span>
 	      </div>
         <div class="col-md-4 text-center oneup-fa-style" style="background-color: cornsilk;">
@@ -133,9 +140,7 @@
               <!--  <i class="fa fa-circle-o fa-stack-2x big-icon fa-override oneup-fa-style" aria-hidden="true"></i>-->
                 <a href="http://1up-machine.tumblr.com/"><i class="fa fa-paint-brush fa-stack-1x big-icon fa-override" id="brush"></i></a>
             </span>
-	      </div>  
-
-
+	      </div>
           <!-- <div id="api-container" ng-controller="ApiController">
               <table class="table display compact" id="apiTable" cellspacing="5" width="100%">
                 <thead>
@@ -158,7 +163,7 @@
                 </tbody>
               </table>
           </div> -->
-	    
+
         </section>
 
         <section id="cv-menu">
