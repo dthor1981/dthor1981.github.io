@@ -3,9 +3,13 @@ angular.module('app.features.controllers')
     return {
         restrict: 'E',
         link: function(scope, element, attr) {
-            var player = element.children('.player')[0];
-            element.children('.play').hover(function() {
-                player.play();
+            var coinPlayer = element.children('.coin')[0];
+            element.children('.coin-play').hover(function() {
+                coinPlayer.play();
+            });
+            var oneUpPlayer = element.children('.one-up')[0];
+            element.children('.one-up-play').hover(function() {
+                oneUpPlayer.play();
             });
         }
     };
