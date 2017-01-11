@@ -11,6 +11,10 @@ angular.module('app.features.controllers')
             element.children('.one-up-play').hover(function() {
                 oneUpPlayer.play();
             });
+            var powerUpPlayer = element.children('.power-up')[0];
+            element.children('.power-up-play').hover(function() {
+                powerUpPlayer.play();
+            });
         }
     };
 });
