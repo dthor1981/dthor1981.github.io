@@ -1,0 +1,16 @@
+[
+  {
+    "id": 2,
+    "img": "",
+    "name": "Cooking",
+    "description": "I love Charon!",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "img": "",
+    "name": "BreakDancing",
+    "description": "I love Charon!",
+    "featured": true
+  }
+]
