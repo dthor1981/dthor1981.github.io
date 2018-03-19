@@ -12,7 +12,7 @@ function doAjax() {
 
     xmlhttp.open("POST", url);
     xmlhttp.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-    xmlhttp.setRequestHeader("Access-Control-Allow-Origin", "http://aurumstandardfoods.com/api.php");
+    xmlhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
     xmlhttp.setRequestHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     xmlhttp.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
     xmlhttp.setRequestHeader("Access-Control-Request-Headers", "X-Requested-With, accept, content-type");
