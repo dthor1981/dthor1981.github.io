@@ -1,0 +1,15 @@
+header {
+    height: 80px;
+    border-bottom: 2px solid;
+    .container-fluid {
+        .row {
+            .col-12{
+                h1{
+                    font-family: "Karla", sans-serif;
+                    font-size: 38px;
+                    margin-top: 0.75rem;
+                }
+            }
+        }
+    }
+}

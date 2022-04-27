@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
+@import 'utilities/variables';
+@import 'utilities/functions';
+@import 'utilities/mixins';
+
+@import 'vendors/customBootstrap.scss';
+
+@import './layout/layout';
