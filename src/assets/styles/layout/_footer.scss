@@ -1,13 +1,17 @@
 footer {
-  height: 15px;
+  height: 60px;
   border-top: 2px solid;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   .container-fluid {
     .row {
       .col-12 {
         p {
           font-family: "Karla", sans-serif;
           font-size: 14px;
-          margin-top: 0.50rem;
+          margin-top: 0.5rem;
           float: right;
         }
       }
