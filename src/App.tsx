@@ -6,6 +6,8 @@ import React from 'react';
 import MainMenu from './components/menu';
 import { Home } from '@mui/icons-material';
 import { Routes, Route } from 'react-router-dom';
+import About from './components/about';
+import Contact from './components/contact';
 // import { Router } from 'react-bootstrap-icons';
 // import mainRoutes from './routes/mainRoutes';
 class App extends React.Component {
@@ -15,10 +17,10 @@ class App extends React.Component {
       <Header />
       <MainMenu />
       <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} /> */}
-          </Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </React.StrictMode>
   }

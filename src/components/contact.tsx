@@ -1,12 +1,12 @@
 import React from "react";
 
-class Home extends React.Component {
+class Contact extends React.Component {
     render() {
         return <div>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
-                        Home
+                        Contact
                     </div>
                 </div>
             </div>
@@ -14,4 +14,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Contact;
