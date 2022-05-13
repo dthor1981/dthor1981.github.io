@@ -1,7 +1,8 @@
 // import { AppBar, Toolbar } from "@material-ui/core";
 import React from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
+import MainMenu from "../../components/menu";
 
 class Header extends React.Component<{}, { show: boolean }> {
   constructor(props: any) {
@@ -17,18 +18,11 @@ class Header extends React.Component<{}, { show: boolean }> {
     headerText: "ALWAYS LEARNING, ALWAYS GROWING, ALWAYS CODING",
   };
 
-  // handleClose() {
-  //     this.setState({ show: false });
-  // };
-
-  handleClose = () => {
+  modalClose = () => {
     this.setState({ show: false });
   };
-  // handleShow() {
-  //     this.setState({ show: true });
-  // }
 
-  handleShow = () => {
+  modalShow = () => {
     this.setState({ show: true });
   };
 
@@ -36,6 +30,8 @@ class Header extends React.Component<{}, { show: boolean }> {
     console.log("OPEN MODAL");
   }
 
+  // TODO: Send down prop to close 
+  
   render() {
     return (
       <header>
@@ -49,28 +45,18 @@ class Header extends React.Component<{}, { show: boolean }> {
             <div className="col-1 fs-2">
               <Icon.MenuButtonWide
                 className="mainMenuSVG mx-auto d-block"
-                onClick={this.handleShow}
+                onClick={this.modalShow}
               />
             </div>
             {/* MODAL */}
-
-            <Modal show={this.state.show} onHide={this.handleClose}>
+            <Modal show={this.state.show} onHide={this.modalClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                {/* <Modal.Title>Menu</Modal.Title> */}
               </Modal.Header>
               <Modal.Body>
-                Woohoo, you're reading this text in a modal!
+                <MainMenu />
               </Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={this.handleClose}>
-                  Close
-                </Button>
-                <Button variant="primary" onClick={this.handleClose}>
-                  Save Changes
-                </Button>
-              </Modal.Footer>
             </Modal>
-
             {/* END MODAL */}
           </div>
         </div>

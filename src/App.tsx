@@ -3,7 +3,6 @@ import './App.css';
 import Header from './layouts/headers/mainHeader';
 import Footer from './layouts/footers/mainFooter';
 import React from 'react';
-import MainMenu from './components/menu';
 import { Home } from '@mui/icons-material';
 import { Routes, Route } from 'react-router-dom';
 import About from './components/about';
@@ -15,7 +14,6 @@ class App extends React.Component {
   render() {
     return <React.StrictMode>
       <Header />
-      <MainMenu />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
