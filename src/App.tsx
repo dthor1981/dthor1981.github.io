@@ -1,14 +1,18 @@
+/*** React ***/
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
+/*** Styles ***/
 import './App.css';
+
+/*** Layout ***/
 import Header from './layouts/headers/mainHeader';
 import Footer from './layouts/footers/mainFooter';
-import React from 'react';
-import { Home } from '@mui/icons-material';
-import { Routes, Route } from 'react-router-dom';
+
+/*** Components ***/
 import About from './components/about';
 import Contact from './components/contact';
-// import { Router } from 'react-bootstrap-icons';
-// import mainRoutes from './routes/mainRoutes';
+import Home from './components/home';
 class App extends React.Component {
 
   render() {
