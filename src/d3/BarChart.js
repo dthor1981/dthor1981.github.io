@@ -2,14 +2,19 @@ import { useD3 } from "../hooks/useD3";
 import React from "react";
 import * as d3 from "d3";
 
-const height = 500;
-const width = 500;
+const width = 200;
+const height = 120;
 
 function BarChart({ data }) {
   const ref = useD3(
     (svg) => {
-      const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+      const margin = { top: 0, right: 30, bottom: 30, left: 40 };
 
+      svg
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "0 0 200 120")
+        .classed("svg-content", true);
+      
       const x = d3
         .scaleBand()
         .domain(data.map((d) => d.year))
@@ -76,8 +81,8 @@ function BarChart({ data }) {
       <svg
         ref={ref}
         viewBox={`0 0 ${height} ${width}`}
+        preserveAspectRatio = "xMinYMin meet"
         style={{
-          height: "100%",
           marginRight: "0px",
           marginLeft: "0px",
         }}
