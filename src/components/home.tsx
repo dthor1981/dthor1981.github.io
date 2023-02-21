@@ -3,6 +3,7 @@ import BarChart from '../d3/BarChart';
 import PieChart from "../d3/PieChart";
 import LineChart from "../d3/LineChart";
 import DonutChart from "../d3/DonutChart";
+import AreaStackChart from "../d3/AreaStackChart"
 import HorizontalBarChart from "../d3/HorizontalBarChart";
 import data from '../assets/data/data.json'
 
@@ -30,7 +31,7 @@ class Home extends React.Component {
                         <DonutChart data={data.donutData} />
                     </div>
                     <div className="col-4 d-flex svg-line-chart-container">
-                        <LineChart data={data.lineData} />
+                        <AreaStackChart data={data.areaStackData} />
                     </div>
                 </div>
             </div>
