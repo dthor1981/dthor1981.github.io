@@ -8,7 +8,7 @@ const height = 120;
 function BarChart({ data }) {
   const ref = useD3(
     (svg) => {
-      const margin = { top: 0, right: 30, bottom: 30, left: 40 };
+      const margin = { top: 10, right: 30, bottom: 30, left: 40 };
 
       svg
         .attr("preserveAspectRatio", "xMinYMin meet")
@@ -82,10 +82,6 @@ function BarChart({ data }) {
         ref={ref}
         viewBox={`0 0 ${height} ${width}`}
         preserveAspectRatio = "xMinYMin meet"
-        style={{
-          marginRight: "0px",
-          marginLeft: "0px",
-        }}
       >
         <g className="plot-area" />
         <g className="x-axis" />
