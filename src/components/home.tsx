@@ -2,6 +2,7 @@ import React from "react";
 import BarChart from '../d3/BarChart';
 import PieChart from "../d3/PieChart";
 import LineChart from "../d3/LineChart";
+import HorizontalBarChart from "../d3/HorizontalBarChart";
 import data from '../assets/data/data.json'
 
 class Home extends React.Component {
@@ -22,7 +23,7 @@ class Home extends React.Component {
                 </div>
                 <div className="row home-row">
                     <div className="col-4 d-flex svg-container">
-                        <BarChart data={data.barData} />
+                        <HorizontalBarChart data={data.horizontalBarData} />
                     </div>
                     <div className="col-4 d-flex svg-container">
                         <PieChart data={data.pieData} />

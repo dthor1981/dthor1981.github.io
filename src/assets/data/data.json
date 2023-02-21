@@ -32,5 +32,28 @@
       "date": "2015-01-01",
       "value": "10000"
     }
-  ]
+  ],
+  "horizontalBarData": [
+    {
+        "Country": "US",
+        "Value": "500"
+    },
+    {
+        "Country": "FR",
+        "Value": "1500"
+    },
+    {
+        "Country": "UK",
+        "Value": "2000"
+    },
+    {
+        "Country": "GR",
+        "Value": "2500"
+    },
+    {
+        "Country": "JP",
+        "Value": "3000"
+    }
+  
+]
 }
