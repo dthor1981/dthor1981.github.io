@@ -27,7 +27,8 @@ function HorizontalBarChart({ data }) {
         .call(d3.axisBottom(x))
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("text-anchor", "end");
+        .style("text-anchor", "end")
+        .style("font-size",5);
 
       // Y axis
       const y = d3
@@ -37,27 +38,10 @@ function HorizontalBarChart({ data }) {
         .padding(0.1);
       svg
         .append("g")
+        .style("font-size",8)
         .call(d3.axisLeft(y))
         .attr("transform", `translate(${margin.left},0)`);
-      // // Add X axis
-      // const x = d3.scaleLinear().domain([0, 6000]).rangeRound([40, width]);
-      // svg
-      //   .append("g")
-      //   .attr("transform", `translate(0, ${height})`)
-      //   .call(d3.axisBottom(x))
-      //   .selectAll("text")
-      //   .attr("transform", "translate(-10,0)rotate(-45)")
-      //   .style("text-anchor", "end");
-
-      // // Y axis
-      // const y = d3
-      //   .scaleBand()
-      //   .rangeRound([0, height])
-      //   .domain(data.map((d) => d.Country))
-      //   .padding(0.1)
-      //   .rangeRound([height - margin.bottom, margin.top]);
-      // svg.append("g").attr("transform", "translate(40,0)").call(d3.axisLeft(y));
-
+      // Add X axis
       //Bars
       svg
         .selectAll("myRect")
@@ -67,6 +51,7 @@ function HorizontalBarChart({ data }) {
         .attr("height", y.bandwidth())
         .attr("y", (d) => y(d.Country))
         .attr("width", (d) => x(d.Value))
+        .style("stroke", `black`)
         .attr("fill", "#69b3a2")
         .attr("transform", `translate(${margin.left},0)`);
 

@@ -12,11 +12,11 @@ class Home extends React.Component {
     render() {
         return <div>
             <div className="container-fluid home-container">
-                <div className="row home-row">
-                    <div className="col-4 d-flex svg-container">
+                <div className="row home-row border-bottom">
+                    <div className="col-4 d-flex svg-container border-end">
                         <BarChart data={data.barData} />
                     </div>
-                    <div className="col-4 d-flex svg-container">
+                    <div className="col-4 d-flex svg-container border-end">
                         <PieChart data={data.pieData} />
                     </div>
                     <div className="col-4 d-flex svg-line-chart-container">
@@ -24,10 +24,10 @@ class Home extends React.Component {
                     </div>
                 </div>
                 <div className="row home-row">
-                    <div className="col-4 d-flex svg-container">
+                    <div className="col-4 d-flex svg-container border-end">
                         <HorizontalBarChart data={data.horizontalBarData} />
                     </div>
-                    <div className="col-4 d-flex svg-container">
+                    <div className="col-4 d-flex svg-container border-end">
                         <DonutChart data={data.donutData} />
                     </div>
                     <div className="col-4 d-flex svg-line-chart-container">

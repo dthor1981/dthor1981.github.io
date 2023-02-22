@@ -8,13 +8,13 @@ const height = 120;
 function BarChart({ data }) {
   const ref = useD3(
     (svg) => {
-      const margin = { top: 10, right: 30, bottom: 30, left: 40 };
+      const margin = { top: 10, right: 10, bottom: 30, left: 40 };
 
       svg
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "0 0 200 120")
         .classed("svg-content", true);
-      
+
       const x = d3
         .scaleBand()
         .domain(data.map((d) => d.year))
@@ -27,21 +27,27 @@ function BarChart({ data }) {
         .rangeRound([height - margin.bottom, margin.top]);
 
       const xAxis = (g) =>
-        g.attr("transform", `translate(0,${height - margin.bottom})`).call(
-          d3
-            .axisBottom(x)
-            .tickValues(
-              d3
-                .ticks(...d3.extent(x.domain()), width / 40)
-                .filter((v) => x(v) !== undefined)
-            )
-            .tickSizeOuter(0)
-        );
+        g
+          .attr("transform", `translate(0,${height - margin.bottom})`)
+          .call(
+            d3
+              .axisBottom(x)
+              .tickValues(
+                d3
+                  .ticks(...d3.extent(x.domain()), width / 40)
+                  .filter((v) => x(v) !== undefined)
+              )
+              .tickSizeOuter(0)
+          )
+          .style(`font-family`, "Karla")
+          .style("color", "#f8f9fa");
 
       const y1Axis = (g) =>
         g
           .attr("transform", `translate(${margin.left},0)`)
-          .style("color", "steelblue")
+          .style("font-size", 10)
+          .style("color", "#f8f9fa")
+          .style("font-family", "Karla")
           .call(d3.axisLeft(y1).ticks(null, "s"))
           .call((g) => g.select(".domain").remove())
           .call((g) =>
@@ -57,15 +63,59 @@ function BarChart({ data }) {
       svg.select(".x-axis").call(xAxis);
       svg.select(".y-axis").call(y1Axis);
 
-      var tooltip = d3.select(".tooltip-area").style("opacity", 0);
-
+      // Grid lines
       svg
-        .select(".plot-area")
-        .attr("fill", "steelblue")
-        .selectAll(".bar")
+        .append("g")
+        .attr("class", "grid")
+        .style("color", "#9FAAAE")
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft().scale(y1).tickSize(-width, 0, 0).tickFormat(""));
+
+      const plotArea = svg.append("g").attr("class", "plot-area");
+
+      const barGroup = plotArea
+        .selectAll("bar")
         .data(data)
         .join("rect")
         .attr("class", "bar")
+        .attr("fill", (d) => {
+          switch (true) {
+            case d.sales >= 5000: {
+              return `#ff1d58`;
+            }
+            case d.sales >= 4000: {
+              return `#fff685`;
+            }
+            case d.sales >= 3000: {
+              return `#5cbdb9`;
+            }
+            default: {
+              return `steelblue`;
+            }
+          }
+        })
+        .style("stroke", `black`)
+        .on("mouseenter", function (actual, i) {
+          d3.select(this).attr("fill", "steelblue");
+        })
+        .on("mouseleave", function (actual, i) {
+          d3.select(this).attr("fill", (d) => {
+            switch (true) {
+              case d.sales >= 5000: {
+                return `#ff1d58`;
+              }
+              case d.sales >= 4000: {
+                return `#fff685`;
+              }
+              case d.sales >= 3000: {
+                return `#5cbdb9`;
+              }
+              default: {
+                return `steelblue`;
+              }
+            }
+          });
+        })
         .attr("x", (d) => x(d.year))
         .attr("width", x.bandwidth())
         .attr("y", (d) => y1(d.sales))
@@ -81,14 +131,11 @@ function BarChart({ data }) {
       <svg
         ref={ref}
         viewBox={`0 0 ${height} ${width}`}
-        preserveAspectRatio = "xMinYMin meet"
+        preserveAspectRatio="xMinYMin meet"
       >
-        <g className="plot-area" />
+        {/* <g className="plot-area" /> */}
         <g className="x-axis" />
         <g className="y-axis" />
-        <g className="tooltip-area">
-          <text className="tooltip-area__text">aas</text>
-        </g>
       </svg>
     </>
   );

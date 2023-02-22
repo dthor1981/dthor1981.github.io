@@ -1,12 +1,13 @@
 .home-container {
-//   background-image: url("../../images/main_bkg_img.jpg");
   height: 110vh;
   min-width: 100vw;
   transition: transform 2s ease-in-out 0s;
+  background-color: #2F4A6D;
 
 }
 
 .home-row {
-  margin-top: 10px;
-  height: 300px;
+  padding-top: 10px;
+  min-height: 300px;
 }
+
