@@ -1,0 +1,23 @@
+.svg-container {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content {
+    display: inline-block;
+    top: 0;
+    left: 0;
+}
+
+.svg-line-chart-container {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.grid .tick line {
+    stroke: #9FAAAE;
+    stroke-opacity: 0.3;
+  }
