@@ -37,7 +37,7 @@ function LineChart({ data }) {
       .call(d3.axisBottom(x));
 
     // Add Y axis
-    var y = d3
+    const y = d3
       .scaleLinear()
       .domain([
         0,

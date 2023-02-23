@@ -13,9 +13,9 @@ function PieChart({ data }) {
     //   height = svg.attr("height"),
 
     svg
-    .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "0 0 100 60")
-    .classed("svg-content", true);
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "0 0 100 60")
+      .classed("svg-content", true);
 
     const radius = Math.min(width, height) / 2.5;
     const g = svg
@@ -35,7 +35,7 @@ function PieChart({ data }) {
     // Generate the arcs
     const arc = d3.arc().innerRadius(0).outerRadius(radius);
 
-    //Generate groups
+    // Generate groups
     const arcs = g
       .selectAll("arc")
       .data(pie(data))
@@ -54,10 +54,11 @@ function PieChart({ data }) {
 
   return (
     <>
-      <svg 
-      viewBox={`0 0 ${height} ${width}`}
-      preserveAspectRatio = "xMinYMin meet"
-      ref={ref}></svg>
+      <svg
+        viewBox={`0 0 ${height} ${width}`}
+        preserveAspectRatio="xMinYMin meet"
+        ref={ref}
+      ></svg>
     </>
   );
 }
