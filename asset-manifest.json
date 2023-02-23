@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dthor1981/dthor1981.github.io/static/css/main.75f6c2df.css",
-    "main.js": "/dthor1981/dthor1981.github.io/static/js/main.2ccad1a7.js",
-    "static/js/787.128fc6e9.chunk.js": "/dthor1981/dthor1981.github.io/static/js/787.128fc6e9.chunk.js",
-    "index.html": "/dthor1981/dthor1981.github.io/index.html",
-    "main.75f6c2df.css.map": "/dthor1981/dthor1981.github.io/static/css/main.75f6c2df.css.map",
-    "main.2ccad1a7.js.map": "/dthor1981/dthor1981.github.io/static/js/main.2ccad1a7.js.map",
-    "787.128fc6e9.chunk.js.map": "/dthor1981/dthor1981.github.io/static/js/787.128fc6e9.chunk.js.map"
+    "main.css": "/static/css/main.75f6c2df.css",
+    "main.js": "/static/js/main.38cdbb0c.js",
+    "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "index.html": "/index.html",
+    "main.75f6c2df.css.map": "/static/css/main.75f6c2df.css.map",
+    "main.38cdbb0c.js.map": "/static/js/main.38cdbb0c.js.map",
+    "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.75f6c2df.css",
-    "static/js/main.2ccad1a7.js"
+    "static/js/main.38cdbb0c.js"
   ]
 }
